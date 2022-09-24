@@ -37,7 +37,7 @@ class Skill(SkillABC):
         self.target.get_damage(self.damage)
         return f"{self.user.name} использует {self.name} и наносит {self.damage} урона сопернику."
 
-    def _is_stamina_enough(self):
+    def _is_stamina_enough(self) -> str:
         return self.user.stamina > self.stamina
 
     def use(self, user: BaseUnit, target: BaseUnit) -> str:
